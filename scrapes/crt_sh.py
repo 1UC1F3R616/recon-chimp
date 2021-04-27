@@ -5,7 +5,9 @@
 ############################################################################################
 
 import requests
-from bs4 import BeautifulSoup
+import bs4
+
+BeautifulSoup = bs4.BeautifulSoup
 
 def crt_sh(domain):
     """
@@ -51,7 +53,7 @@ def crt_sh(domain):
                 total.append(x)
         subdomains_only_column = total[-1]
         for subdomain in subdomains_only_column:
-            if subdomain not in ['<br/>', '<br/>']:
+            if type(subdomain) == bs4.element.NavigableString:
                 subdomains.add(subdomain)
     
     subdomain_list = list(subdomains)
@@ -60,6 +62,5 @@ def crt_sh(domain):
 
             
 
-
 ## Testing Code
-print(crt_sh('dscvit2.com'))
+# print(crt_sh('dscvit.com'))
