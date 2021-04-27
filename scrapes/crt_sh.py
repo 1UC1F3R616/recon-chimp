@@ -2,6 +2,7 @@
 # By: 1UC1F3R616
 # URL: https://crt.sh/
 # Date-Modified: 27-April-2020
+# Time avg: Time taken is under 30 second
 ############################################################################################
 
 import requests
