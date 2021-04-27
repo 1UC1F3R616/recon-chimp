@@ -15,7 +15,9 @@ DNSDumpster [confirmed]
 RapidDNS [confirmed]
 Integration of waybackurls https://github.com/tomnomnom/waybackurls
 
-2) Filter found subdomains using httpx
+2.1) Resolve all the subdomains to their ips
+2.2) Filter found subdomains using httpx
+2.3) 
 
 
 3) directory bruteforcing with a small customized list for the domains [not in P]
@@ -73,3 +75,7 @@ Publish research paper by claiming it generates good results and does most of th
 for all of their work
 
 ----------------------------------------------------------------------------------------------
+
+
+## Extras
+- Add Proxy Option
