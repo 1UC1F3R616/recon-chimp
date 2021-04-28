@@ -1,8 +1,8 @@
 #!/bin/bash
-# python3 main.py
-# httpx -l temp_db/subdomains.txt -no-color -follow-host-redirects -status-code -title -content-length -web-server -silent >> temp_db/active_subdomains.txt
+python3 main.py
+httpx -l temp_db/subdomains.txt -no-color -follow-host-redirects -status-code -title -content-length -web-server -silent >> temp_db/active_subdomains.txt
 
-# httpx -l temp_db/subdomains.txt -no-color -follow-host-redirects -silent >> temp_db/ffuf_subdomains.txt
+httpx -l temp_db/subdomains.txt -no-color -follow-host-redirects -silent >> temp_db/ffuf_subdomains.txt
 
 i=0
 while IFS= read -r line; do

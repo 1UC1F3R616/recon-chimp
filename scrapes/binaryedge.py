@@ -1,9 +1,8 @@
 ############################################################################################
-# By: 1UC1F3R616
+# By: Siddhartha
 # URL: https://app.binaryedge.io/
 # Date-Modified: 28-April-2020
 # Time avg: Time taken is under 30 seconds
-# Leaving it because not understanding how to use properly
 ############################################################################################
 
 import os

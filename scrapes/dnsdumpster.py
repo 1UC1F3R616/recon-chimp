@@ -1,5 +1,5 @@
 ############################################################################################
-# By: 1UC1F3R616
+# By: Siddhartha
 # URL: https://dnsdumpster.com
 # Date-Modified: 28-April-2020
 # Time avg: Time taken is under 30 seconds

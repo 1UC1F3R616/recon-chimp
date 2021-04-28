@@ -5,7 +5,6 @@
 # Time avg: 
 # Note: Had to reverse engineer
 # Updare: Tried RE, Not Succeed in what I wanted so now we need to intercept the request and use the tokens from their when making a scan
-# work-left: take data from config file
 ############################################################################################
 
 import os

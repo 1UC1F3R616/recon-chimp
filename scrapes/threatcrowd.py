@@ -1,5 +1,5 @@
 ############################################################################################
-# By: 1UC1F3R616
+# By: Akshit
 # URL: https://www.threatcrowd.org/searchApi/v2/domain/report/?domain=
 # Date-Modified: 28-April-2020
 # Time avg: Time taken is under 30 seconds
