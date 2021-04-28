@@ -8,6 +8,8 @@
 # work-left: take data from config file
 ############################################################################################
 
+import os
+import json
 import requests
 import bs4
 
@@ -47,6 +49,11 @@ BeautifulSoup = bs4.BeautifulSoup
 #     print('done')
 ##################
 
+############ PATHS ##############
+path = os.path.abspath('')
+
+config_file_path = os.path.join(path, '.config.json')
+#################################
 
 def c99(domain):
     """
@@ -76,7 +83,11 @@ def c99(domain):
     }
 
     # Make a config file from where all files can be configured
-    data = 'CSRF1013566176013524=CSRF110138824&CSRF1107542595702104=network104844821&CSRF1074232519428413=intruder102395829&CSRF1042148766674400=cracker106191388&CSRF1037538048420212=spambot102672058&CSRF1000346543054959=espionage108912247&CSRF1032055544559625=firewall101328885&CSRF1019931363851841=addict109152379&CSRF1050005833718553=counterfeiter107559221&CSRF1020245951830640=spambot104989441&CSRF1096552198521366=CSRF109611552&CSRF1002041487332118=honeypot107357348&CSRF1102977247150436=spammer107341411&CSRF1081099726055260=stalker105689788&CSRF1024132533889206=scammer103872046&CSRF1017799996918442=malware104347714&CSRF1034834089072190=subnet_ip106861488&CSRF1025291767856366=drudge101150230&CSRF1065737879143935=ipv4101030025&CSRF1058038210550748=stalker108056404&CSRF1080109221539261=cyber107980423&CSRF1084745217985019=spambot104063277&CSRF1010129492983026=Trojan109057859&CSRF1095349497421608=subnet_ip105426753&CSRF1005435740918959=vulnerability100370523&CSRF1037137301955191=spy110286266&CSRF1082016311375833=cyberspace109477503&CSRF1027615352072011=infiltrator102183920&CSRF1096965064825209=network110691996&CSRF1053946025837679=espionage101568554&CSRF1097293093439684=malware109531546&CSRF1084969866374297=cyberwar105070989&CSRF1104131552617686=cyberwar109061695&CSRF9843433218797932=cybercrime108913136&jn=JS+aan%2C+T+aangeroepen%2C+CSRF+aangepast&domain=dscvit.com&lol-stop-reverse-engineering-my-source-and-buy-an-api-key=fa5475d8fcfbea7fe8d175dc2600a9c196ffa5f2&scan_subdomains='
+    with open(config_file_path, 'r') as json_data_file:
+        data = json.load(json_data_file)
+        DATA = data.get('DATA')
+
+    data = DATA
 
     response = requests.post('https://subdomainfinder.c99.nl/', headers=headers, data=data, verify=False)
 

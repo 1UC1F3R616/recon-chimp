@@ -1,21 +1,21 @@
 1) Sites to be web scraped for a given domain:
-crt.sh [confirmed]
-https://fofa.so/ [confirmed]
-https://subdomainfinder.c99.nl/ [confirmed]
-certspotter [confirmed] -- extraction for certificates of a website
-threatcrowd [confirmed] use https://github.com/AlienVault-OTX/ApiV2 API
-Binaryedge [confirmed] -- limited 250 queries allowed so don't exhaust
-Intelx [confirmed] 
+crt.sh [confirmed] [done]
+https://fofa.so/ [confirmed] [skipped]
+https://subdomainfinder.c99.nl/ [confirmed] [done]
+certspotter [confirmed] -- extraction for certificates of a website [will incorporate later]
+threatcrowd [confirmed] use https://github.com/AlienVault-OTX/ApiV2 API [done]
+Binaryedge [confirmed] -- limited 250 queries allowed so don't exhaust [might update later]
+Intelx [confirmed]
 Recon.dev [confirmed] -- very small dataset and query in free plan
 Shodan [confirmed] use api
-Spyse [confirmed] Good One use API
+Spyse [confirmed] Good One use API [leaving, API not free and is having usecase higher than what we needed]
 Virustotal [confirmed] try to find how we can incoprate this one
 Zoomeye [confirmed]
-DNSDumpster [confirmed]
+DNSDumpster [confirmed] [done]
 RapidDNS [confirmed]
 Integration of waybackurls https://github.com/tomnomnom/waybackurls
 
-2.1) Resolve all the subdomains to their ips
+2.1) Resolve all the subdomains to their ips [optional here]
 2.2) Filter found subdomains using httpx
 2.3) 
 
