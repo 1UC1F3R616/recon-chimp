@@ -25,3 +25,4 @@ def threatcrowd(domain):
 
 ## Test Code
 # print(threatcrowd('vit.ac.in'))
+## No result for dscvit.com
