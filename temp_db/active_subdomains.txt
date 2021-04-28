@@ -1,0 +1,4 @@
+https://resources.dscvit.com [200] [cloudflare]
+https://hackjudge.dscvit.com [200] [cloudflare]
+https://hyperion.dscvit.com [200] [cloudflare]
+
