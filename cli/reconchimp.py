@@ -1,10 +1,11 @@
 import typer
+from notification.notifier import send_tg_notif, send_discord_notif
 from enum import Enum
 
 app = typer.Typer()
 
 
-class Notifier(Enum):
+class Notifiers(Enum):
     telegram = "telegram"
     discord = "discord"
 
@@ -13,12 +14,16 @@ class Notifier(Enum):
 def do_recon(
     domain: str = typer.Argument("", help="The domain name for the required host"),
     all: bool = typer.Option(True, help="Selects all available tools for recon"),
-    notify: Notifier = typer.Option("", help="Select notification service"),
+    notify: Notifiers = typer.Option("", help="Select notification service"),
 ):
     """
     performs reconnaissance on the supplied domain
+    TODO: call the scrapers
     """
-    # print(domain, notify.name)
+    if notify == Notifiers.telegram:
+        print(send_tg_notif())
+    elif notify == Notifiers.discord:
+        send_discord_notif()
 
 
 app()
