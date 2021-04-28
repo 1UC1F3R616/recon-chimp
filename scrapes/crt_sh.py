@@ -13,7 +13,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 BeautifulSoup = bs4.BeautifulSoup
 
-def crt_sh(domain):
+def scrape(domain):
     """
     :input: domain name
     :return-type: list
