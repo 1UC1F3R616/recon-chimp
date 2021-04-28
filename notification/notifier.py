@@ -10,16 +10,21 @@ def send_tg_notif(chat: str = config("TELEGRAM_CHAT_ID")) -> bool:
     """
     bot_token = config("TELEGRAM_BOT_TOKEN")
 
-    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-    payload = json.dumps(
-        {
-            "chat_id": chat,
-            "text": "workflow run completed.",
-        }
-    )
-    headers = {"Content-Type": "application/json"}
+    url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
+    payload = {"chat_id": chat, "caption": "Workflow run complete. File(s) attached."}
 
-    response = request("POST", url, headers=headers, data=payload)
+    files = [
+        (
+            "document",
+            (
+                "active_subdomains.txt",
+                open("temp_db/active_subdomains.txt", "rb"),
+                "text/plain",
+            ),
+        )
+    ]
+
+    response = request("POST", url, data=payload, files=files)
     if response.status_code == 200:
         return True
     print(response.status_code)
