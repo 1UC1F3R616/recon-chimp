@@ -10,7 +10,7 @@ import bs4
 
 BeautifulSoup = bs4.BeautifulSoup
 
-def crt_sh(domain):
+def scrape(domain):
     """
     :input: domain name
     :return-type: list

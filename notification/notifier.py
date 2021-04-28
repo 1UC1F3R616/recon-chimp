@@ -1,5 +1,5 @@
-from requests import request
 import json
+from requests import request
 from utils.config import config
 
 
@@ -39,7 +39,7 @@ def send_discord_notif(url: str = config("DISCORD_WEBHOOK_URL")) -> bool:
     headers = {"Content-Type": "application/json"}
 
     response = request("POST", url, headers=headers, data=payload)
-    if response.status_code == 200:
+    if response.status_code == 204:
         return True
     print(response.status_code)
     return False

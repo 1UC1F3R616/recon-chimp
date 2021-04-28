@@ -1,6 +1,7 @@
 import typer
-from notification.notifier import send_tg_notif, send_discord_notif
 from enum import Enum
+from scrapes import crt_sh
+from notification.notifier import send_tg_notif, send_discord_notif
 
 app = typer.Typer()
 
@@ -20,6 +21,14 @@ def do_recon(
     performs reconnaissance on the supplied domain
     TODO: call the scrapers
     """
+
+    if all:
+        print(crt_sh.scrape(domain))
+    else:
+        """
+        TODO: selection logic
+        """
+
     if notify == Notifiers.telegram:
         print(send_tg_notif())
     elif notify == Notifiers.discord:
