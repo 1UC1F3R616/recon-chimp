@@ -23,7 +23,7 @@ def do_recon(
     """
 
     if all:
-        print(crt_sh.scrape(domain))
+        print(crt_sh.crt_sh(domain))
     else:
         """
         TODO: selection logic
